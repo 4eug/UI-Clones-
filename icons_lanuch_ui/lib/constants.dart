@@ -6,5 +6,5 @@ const Color kDarkGray = Color(0xFF181818);
 
 class UIGuide {
 // ignore: non_constant_identifier_names
-  static const String icons_3d = "assets/images/Airpod.png";
+  static const String icons_3d = "assets/images/3d.png";
 }
