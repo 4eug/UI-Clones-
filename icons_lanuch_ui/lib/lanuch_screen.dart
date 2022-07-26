@@ -13,7 +13,7 @@ class _LanuchScreenState extends State<LanuchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: kBlack,
-        body: SingleChildScrollView(
+        body: SafeArea(
           child: Column(
             children: [
               const Padding(
@@ -25,24 +25,20 @@ class _LanuchScreenState extends State<LanuchScreen> {
                   Image.asset(
                     UIGuide.icons_3d,
                     width: 380,
-                    height: 400,
                   ),
                 ],
               ),
+              const SizedBox(height: 25),
+              Expanded(
+                  child: Container(
+                padding: const EdgeInsets.only(top: 5),
+                decoration: BoxDecoration(
+                  color: kDarkGray,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+              ))
             ],
           ),
         ));
   }
-}
-
-Widget _icons_3d() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      SizedBox(
-        width: 400,
-        child: Image.asset(UIGuide.icons_3d),
-      ),
-    ],
-  );
 }
