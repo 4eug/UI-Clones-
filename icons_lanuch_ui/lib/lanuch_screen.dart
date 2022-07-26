@@ -25,7 +25,7 @@ class _LanuchScreenState extends State<LanuchScreen> {
                 children: [
                   Image.asset(
                     UIGuide.icons_3d,
-                    width: 380,
+                    width: 360,
                   ),
                 ],
               ),
@@ -80,7 +80,9 @@ class _LanuchScreenState extends State<LanuchScreen> {
                           children: [
                             const SizedBox(width: 20),
                             Text(
-                              "3D Icons",
+                              "Some Awesome 3D Icons ",
+                              overflow: TextOverflow.visible,
+                              maxLines: 2,
                               style: GoogleFonts.montserrat(
                                 fontSize: 20,
                                 color: kWhite,
@@ -90,7 +92,41 @@ class _LanuchScreenState extends State<LanuchScreen> {
                             )
                           ],
                         ),
-                        const SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const SizedBox(width: 20),
+                            Text(
+                              "for your designs and ",
+                              overflow: TextOverflow.visible,
+                              maxLines: 2,
+                              style: GoogleFonts.montserrat(
+                                fontSize: 20,
+                                color: kWhite,
+                                letterSpacing: 0.168,
+                                fontStyle: FontStyle.normal,
+                              ),
+                            )
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const SizedBox(width: 20),
+                            Text(
+                              "Illustrations",
+                              overflow: TextOverflow.visible,
+                              maxLines: 2,
+                              style: GoogleFonts.montserrat(
+                                fontSize: 20,
+                                color: kWhite,
+                                letterSpacing: 0.168,
+                                fontStyle: FontStyle.normal,
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(height: 50),
                         _createBtn(context)
                       ],
                     ),
@@ -127,6 +163,7 @@ Widget _createBtn(context) {
               "Get Started",
               style: GoogleFonts.montserrat(
                 fontSize: 20,
+                fontWeight: FontWeight.w500,
                 color: kBlack,
                 letterSpacing: 0.168,
                 fontStyle: FontStyle.normal,
